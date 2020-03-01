@@ -41,5 +41,6 @@ class TestCase(unittest.TestCase):
         diffCheck = task.duration(d1, d2)
         self.assertEqual(oracle, diffCheck)
 
+
 if __name__ == '__main__':
     unittest.main()
