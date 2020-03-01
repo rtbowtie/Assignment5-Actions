@@ -3,6 +3,7 @@ import task
 import random
 import math
 
+
 class TestCase(unittest.TestCase):
 
     def test1(self):
