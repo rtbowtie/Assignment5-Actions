@@ -17,6 +17,7 @@ class TestCase(unittest.TestCase):
         randNum = random.radom()
         oracle = (math.pi)*((randNum)*randNum)
         pred = task.area(randNum)
+        self.assertEqual(oracle, pred)
 
 
 if __name__ == '__main__':
