@@ -35,8 +35,8 @@ class TestCase(unittest.TestCase):
     def test5(self):
         d1 = radar.random_datetime()
         d2 = radar.random_datetime()
-        d1 = datetime.strptime(d1, "%Y-%m-%d")
-        d2 = datetime.strptime(d2, "%Y-%m-%d")
+        d1 = datetime.strptime(str(d1), "%Y-%m-%d")
+        d2 = datetime.strptime(str(d2), "%Y-%m-%d")
         oracle = ((d2 - d1).days)
         diffCheck = task.duration(d1, d2)
         self.assertEqual(oracle, diffCheck)
