@@ -20,6 +20,16 @@ class TestCase(unittest.TestCase):
         pred = task.area(randNum)
         self.assertEqual(oracle, pred)
 
+    def test4(self):
+        num = random.radnint(2,25)
+        list = []
+        for i in (num-1):
+            var = random.randint(0,100)
+            list.append(var)
+        oracle = [list[0], list[num-2]]
+        listCheck = task.listFun(list)
+        self.assertEqual(oracle, listCheck)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -10,3 +10,10 @@ def area(radius):
     mid = pow(radius, 2)
     area = pi*mid
     return area
+
+def listFunc(list):
+    var1 = list[0]
+    num = len(list)
+    var2 = list[num - 1]
+    list2 = [var1, var2]
+    return list2
