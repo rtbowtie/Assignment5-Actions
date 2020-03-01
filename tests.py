@@ -15,7 +15,7 @@ class TestCase(unittest.TestCase):
         self.assertNotEqual(expected, task.firstrun())
 
     def test3(self):
-        randNum = random.radom()
+        randNum = random.random()
         oracle = (math.pi)*((randNum)*randNum)
         pred = task.area(randNum)
         self.assertEqual(oracle, pred)
