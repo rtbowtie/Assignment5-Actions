@@ -21,13 +21,13 @@ class TestCase(unittest.TestCase):
         self.assertEqual(oracle, pred)
 
     def test4(self):
-        num = random.radnint(2, 25)
+        num = random.randint(2, 25)
         list = []
         for i in (num-1):
             var = random.randint(0, 100)
             list.append(var)
         oracle = [list[0], list[num-2]]
-        listCheck = task.listFun(list)
+        listCheck = task.listFunc(list)
         self.assertEqual(oracle, listCheck)
 
 
