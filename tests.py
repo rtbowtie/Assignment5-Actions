@@ -23,7 +23,7 @@ class TestCase(unittest.TestCase):
     def test4(self):
         num = random.randint(2, 25)
         list = []
-        for i in (num-1):
+        for i in range(0, num-1):
             var = random.randint(0, 100)
             list.append(var)
         oracle = [list[0], list[num-2]]
