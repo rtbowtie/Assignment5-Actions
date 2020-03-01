@@ -1,4 +1,5 @@
 import math
+from datetime import datetime
 
 
 def firstrun():
@@ -18,3 +19,9 @@ def listFunc(list):
     var2 = list[num - 1]
     list2 = [var1, var2]
     return list2
+
+
+def duration(date1, date2):
+    d1 = datetime.strptime(date1, "%Y-%m-%d")
+    d2 = datetime.strptime(date2, "%Y-%m-%d")
+    return abs((d2 - d1).days)

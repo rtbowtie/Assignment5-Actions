@@ -2,6 +2,8 @@ import unittest
 import task
 import random
 import math
+from datetime import datetime
+import radar
 
 
 class TestCase(unittest.TestCase):
@@ -30,6 +32,14 @@ class TestCase(unittest.TestCase):
         listCheck = task.listFunc(list)
         self.assertEqual(oracle, listCheck)
 
+    def test5(self):
+        d1 = radar.random_datetime()
+        d2 = radar.random_datetime()
+        d1 = datetime.strptime(d1, "%Y-%m-%d")
+        d2 = datetime.strptime(d2, "%Y-%m-%d")
+        oracle = ((d2 - d1).days)
+        diffCheck = task.duration(d1, d2)
+        self.assertEqual(oracle, diffCheck)
 
 if __name__ == '__main__':
     unittest.main()
